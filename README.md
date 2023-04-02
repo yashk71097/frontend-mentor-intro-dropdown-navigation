@@ -61,7 +61,7 @@ arrow[1].setAttribute("src", "../images/icon-arrow-down.svg");
 
 ### Useful resources
 
--   [Example resource 1](https://developer.mozilla.org/en-US/docs/Web/JavaScript) - This website helped me with javascript methods and functions.
+-   [https://developer.mozilla.org/en-US/docs/Web/JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript) - This website helped me with javascript methods and functions.
 
 ## Author
 
