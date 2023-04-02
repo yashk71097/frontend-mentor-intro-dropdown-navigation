@@ -34,7 +34,7 @@ Users should be able to:
 ### Links
 
 -   Solution URL: [https://www.frontendmentor.io/solutions/intro-section-with-dropdown-navigation-PTo9F0Drkh](https://your-solution-url.com)
--   Live Site URL: [https://yashk71097.github.io/frontend-mentor-intro-dropdown-navigation/](https://your-live-site-url.com)
+-   Live Site URL: [https://starlit-cactus-7500a5.netlify.app](https://your-live-site-url.com)
 
 ## My process
 
