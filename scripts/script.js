@@ -20,25 +20,25 @@ console.log(arrow);
 function openFeaturesDropdown() {
     featuresDropdown.classList.remove("hidden");
     featuresDropdown.classList.add("show");
-    arrow[0].setAttribute("src", "../images/icon-arrow-down.svg");
+    arrow[0].setAttribute("src", "./images/icon-arrow-down.svg");
 }
 
 function closeFeaturesDropdown() {
     featuresDropdown.classList.remove("show");
     featuresDropdown.classList.add("hidden");
-    arrow[0].setAttribute("src", "../images/icon-arrow-up.svg");
+    arrow[0].setAttribute("src", "./images/icon-arrow-up.svg");
 }
 
 function openCompanyDropdown() {
     companyDropdown.classList.remove("hidden");
     companyDropdown.classList.add("show");
-    arrow[1].setAttribute("src", "../images/icon-arrow-down.svg");
+    arrow[1].setAttribute("src", "./images/icon-arrow-down.svg");
 }
 
 function closeCompanyDropdown() {
     companyDropdown.classList.remove("show");
     companyDropdown.classList.add("hidden");
-    arrow[1].setAttribute("src", "../images/icon-arrow-up.svg");
+    arrow[1].setAttribute("src", "./images/icon-arrow-up.svg");
 }
 
 menuButton.addEventListener("click", () => {
