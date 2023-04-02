@@ -1,0 +1,416 @@
+/* -------------- */
+/* Default Values */
+/* -------------- */
+
+/* Box Sizing */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Reset default Margin and Padding */
+
+*,
+html {
+    margin: 0;
+    padding: 0;
+}
+
+/* Set default body styles */
+
+body {
+    font-family: "Epilogue", sans-serif;
+    font-size: 18px;
+    line-height: 1.5;
+    background-size: cover;
+    background-position: bottom;
+    min-height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    scroll-behavior: smooth;
+    background-color: var(--almost-white);
+}
+
+/* Images Setup */
+
+img,
+picture {
+    max-width: 100%;
+    display: block;
+}
+
+/* Form Element Setup */
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/* Reset list style to none */
+
+menu:not(article menu),
+ol:not(article ol),
+ul:not(article ul) {
+    list-style: none;
+}
+
+/* Reset lists padding */
+
+menu,
+ol,
+ul {
+    padding-left: 0;
+}
+
+/* Reset list markers */
+
+article ol,
+article ul {
+    list-style-position: inside;
+}
+
+/* Reset Cursor for Elements */
+
+label,
+button,
+select,
+summary,
+[type="radio"],
+[type="submit"],
+[type="checkbox"] {
+    cursor: pointer;
+}
+
+/* --------------- */
+/* Set Root Values */
+/* --------------- */
+
+:root {
+    --almost-white: hsl(0, 0%, 98%);
+    --medium-gray: hsl(0, 0%, 41%);
+    --almost-black: hsl(0, 0%, 8%);
+}
+
+/* --------------- */
+/* Utility Classes */
+/* --------------- */
+
+/* Flex Container */
+
+.flex {
+    display: flex;
+    gap: var(--gap, 2rem);
+}
+
+.flex-center {
+    justify-content: center;
+    align-items: center;
+}
+
+/* Grid Container */
+
+.grid {
+    display: grid;
+    gap: var(--gap, 2rem);
+    height: 100vh;
+}
+
+/* TypeScripts */
+
+.text-white {
+    color: #ffffff;
+}
+
+.text-black {
+    color: #000000;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+.capitalize {
+    text-transform: capitalize;
+}
+
+/* Block Display */
+
+.show {
+    display: block;
+}
+
+/* Hidden Display */
+
+.hidden {
+    display: none;
+}
+
+/* Style Navigation link */
+
+.nav-link {
+    text-decoration: none;
+    padding-block: 7px;
+    letter-spacing: 0.5px;
+    color: var(--medium-gray);
+    font-size: 1rem;
+    transition: all 0.3s ease-in-out;
+}
+
+.nav-link:hover {
+    color: var(--almost-black);
+}
+
+/* -------------- */
+/* Custom Classes */
+/* -------------- */
+
+/* Desktop First Approach only for Navigation Bar */
+
+.wrapper {
+    padding: 10px 20px;
+}
+
+.primary-header {
+    line-height: 3;
+}
+
+.primary-navigation {
+    flex-grow: 1;
+    justify-content: space-between;
+}
+
+.arrow-image {
+    display: inline-block;
+    padding-left: 5px;
+    position: relative;
+    bottom: 2px;
+}
+
+.features-dropdown img {
+    display: inline-block;
+    padding-right: 10px;
+    position: relative;
+    top: 2px;
+}
+
+.dropdown {
+    margin-left: 20px;
+}
+
+.register {
+    border: 1px solid var(--medium-gray);
+    padding: 10px 15px;
+    border-radius: 10px;
+}
+
+.register:hover {
+    border: 1px solid var(--almost-black);
+}
+
+.menu-toggle {
+    display: none;
+    width: 2rem;
+    aspect-ratio: 1;
+    z-index: 9999;
+    background-color: transparent;
+    border: none;
+    background-image: url("../images/icon-menu.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    top: 1rem;
+    right: 2rem;
+}
+
+/* Mobile First Approach */
+
+.container > * {
+    padding-block: 20px;
+}
+
+.about h1 {
+    font-size: clamp(2rem, 8vw, 4rem);
+}
+
+.about p {
+    font-size: clamp(0.9rem, 3vw, 1.3rem);
+    color: var(--medium-gray);
+    padding-block: 10px;
+}
+
+.cta {
+    padding: 10px 20px;
+    margin-block: 20px;
+    background-color: black;
+    border: 1px solid black;
+    border-radius: 12px;
+    font-size: 1rem;
+    transition: all 0.3s ease-out;
+}
+
+.cta:hover {
+    background-color: white;
+    color: black;
+}
+
+.clients img {
+    display: inline-block;
+    width: 100%;
+}
+
+.clients {
+    gap: 1rem;
+    padding-inline: 10px;
+    margin-top: 20px;
+}
+
+.clients > div {
+    flex: 1 1 100%;
+}
+
+/* Style Footer */
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+/* ------------- */
+/* Media Queries */
+/* ------------- */
+
+/* When screen size decreases than 767px */
+/* Desktop First Approach for Navigation Bar */
+
+@media (max-width: 767px) {
+    .primary-navigation {
+        flex-direction: column;
+        position: fixed;
+        inset: 0 0 0 30%;
+        padding: 5rem 2rem;
+        background-color: #ffffff;
+        justify-content: flex-start;
+        transform: translateX(100%);
+        transition: transform 1s ease-in-out;
+    }
+
+    .primary-navigation[data-visible="true"] {
+        transform: translateX(0%);
+    }
+
+    .logo {
+        padding-top: 15px;
+    }
+
+    .left-nav,
+    .right-nav {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .right-nav {
+        text-align: center;
+    }
+
+    .register {
+        display: inline-block;
+        padding: 0;
+        width: 100%;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .menu-toggle[aria-expanded="true"] {
+        background-image: url("../images/icon-close-menu.svg");
+    }
+}
+
+/* When screen size increases than 767px */
+/* Mobile First Approach */
+
+@media (min-width: 767px) {
+    /* Navigation Bar Dropdown */
+
+    .dropdown-link {
+        position: relative;
+    }
+
+    .dropdown {
+        position: absolute;
+        top: 4rem;
+        padding-inline: 20px;
+        background-color: #ffffff;
+        border-radius: 10px;
+        box-shadow: -1px 11px 26px 10px rgba(224, 221, 224, 1);
+    }
+
+    .features-dropdown img {
+        display: inline-block;
+        padding-right: 10px;
+        position: relative;
+        top: 2px;
+    }
+
+    .features-dropdown {
+        left: -4rem;
+        width: 155px;
+    }
+
+    .company-dropdown {
+        left: 0rem;
+        width: 120px;
+    }
+
+    /* Main Body Content */
+
+    .container {
+        display: flex;
+        gap: 2rem;
+        padding: 5% 2%;
+    }
+
+    .container > * {
+        flex: 1;
+    }
+
+    .image {
+        order: 1;
+        display: flex;
+        justify-content: center;
+    }
+
+    .hero-image {
+        min-height: 500px;
+        max-height: 600px;
+        content: url("../images/image-hero-desktop.png");
+    }
+
+    .about {
+        text-align: left;
+    }
+
+    .about h1 {
+        margin-top: 100px;
+    }
+
+    .cta {
+        margin-block: 40px;
+    }
+
+    .clients {
+        margin-block: 40px;
+    }
+}
